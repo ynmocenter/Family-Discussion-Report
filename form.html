@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقرير مناقشة الأسرة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h1 {
+            background-color: #2C3E50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        form {
+            text-align: right;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #E67E22;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="شعار المركز" class="logo">
+        <h1>تقرير مناقشة الأسرة</h1>
+        <form action="https://formsubmit.co/info@ynmocenter.com" method="POST">
+            <label>تاريخ الاجتماع:</label>
+            <input type="date" name="meeting_date" required>
+            
+            <label>طريقة الاجتماع:</label>
+            <select name="meeting_type">
+                <option value="حضوري">حضوري</option>
+                <option value="أونلاين">أونلاين</option>
+            </select>
+            
+            <label>اسم الطفل:</label>
+            <input type="text" name="child_name" required>
+            
+            <label>أسماء الحضور:</label>
+            <textarea name="attendees" required></textarea>
+            
+            <label>حضور الوالدين:</label>
+            <select name="parents_attendance">
+                <option value="الأب">الأب</option>
+                <option value="الأم">الأم</option>
+                <option value="الأب والأم">الأب والأم</option>
+            </select>
+            
+            <label>موضوع الاجتماع:</label>
+            <select name="meeting_topic">
+                <option value="مناقشة سلوكية">مناقشة سلوكية</option>
+                <option value="متابعة أول شهر">متابعة أول شهر</option>
+                <option value="متابعة ثالث شهر">متابعة ثالث شهر</option>
+                <option value="متابعة سادس شهر">متابعة سادس شهر</option>
+                <option value="متابعة ٩ أشهر">متابعة ٩ أشهر</option>
+                <option value="متابعة سنة">متابعة سنة</option>
+            </select>
+            
+            <label>الملاحظات والتوصيات:</label>
+            <textarea name="notes_recommendations"></textarea>
+            
+            <label>الأهداف المحددة:</label>
+            <textarea name="goals"></textarea>
+            
+            <label>الإجراءات المتفق عليها:</label>
+            <textarea name="actions"></textarea>
+            
+            <label>الموعد المتوقع للاجتماع القادم:</label>
+            <input type="date" name="next_meeting">
+            
+            <button type="submit">إرسال التقرير</button>
+        </form>
+    </div>
+</body>
+</html>
