@@ -7,103 +7,105 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            text-align: center;
             direction: rtl;
-            margin: 0;
-            padding: 0;
+            text-align: right;
+            background-color: #f9f9f9;
+            color: #333;
         }
         .container {
             width: 60%;
             margin: auto;
-            background: #ffffff;
+            background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .logo {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        h1 {
-            background-color: #2C3E50;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        form {
-            text-align: right;
+        h2 {
+            text-align: center;
+            color: #2a607c;
         }
         label {
             font-weight: bold;
+            display: block;
+            margin-top: 10px;
         }
-        input, select, textarea {
+        select, input, textarea {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
             border-radius: 5px;
         }
         button {
-            background-color: #E67E22;
+            background-color: #2a607c;
             color: white;
-            padding: 10px 20px;
+            padding: 10px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
+            width: 100%;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #1d4f66;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="logo.png" alt="شعار المركز" class="logo">
-        <h1>تقرير مناقشة الأسرة</h1>
+        <img src="logo.png" alt="شعار المركز" style="display: block; margin: auto; width: 120px;">
+        <h2>تقرير مناقشة الأسرة</h2>
         <form action="https://formsubmit.co/info@ynmocenter.com" method="POST">
-            <label>تاريخ الاجتماع:</label>
-            <input type="date" name="meeting_date" required>
+            <label>تاريخ الاجتماع</label>
+            <input type="date" name="تاريخ الاجتماع" required>
             
-            <label>طريقة الاجتماع:</label>
-            <select name="meeting_type">
+            <label>نوع الاجتماع</label>
+            <select name="نوع الاجتماع" required>
+                <option value="اونلاين">اونلاين</option>
                 <option value="حضوري">حضوري</option>
-                <option value="أونلاين">أونلاين</option>
             </select>
             
-            <label>اسم الطفل:</label>
-            <input type="text" name="child_name" required>
+            <label>اسم الطفل</label>
+            <input type="text" name="اسم الطفل" required>
             
-            <label>أسماء الحضور:</label>
-            <textarea name="attendees" required></textarea>
+            <label>أسماء الحضور</label>
+            <textarea name="أسماء الحضور" required></textarea>
             
-            <label>حضور الوالدين:</label>
-            <select name="parents_attendance">
-                <option value="الأب">الأب</option>
+            <label>حضور</label>
+            <select name="حضور" required>
                 <option value="الأم">الأم</option>
-                <option value="الأب والأم">الأب والأم</option>
+                <option value="الأب">الأب</option>
+                <option value="الأم والأب">الأم والأب</option>
             </select>
             
-            <label>موضوع الاجتماع:</label>
-            <select name="meeting_topic">
+            <label>موضوع الاجتماع</label>
+            <select name="موضوع الاجتماع" required>
                 <option value="مناقشة سلوكية">مناقشة سلوكية</option>
-                <option value="متابعة أول شهر">متابعة أول شهر</option>
+                <option value="متابعة اول شهر">متابعة أول شهر</option>
                 <option value="متابعة ثالث شهر">متابعة ثالث شهر</option>
                 <option value="متابعة سادس شهر">متابعة سادس شهر</option>
-                <option value="متابعة ٩ أشهر">متابعة ٩ أشهر</option>
+                <option value="متابعة ٩ شهور">متابعة ٩ شهور</option>
                 <option value="متابعة سنة">متابعة سنة</option>
             </select>
             
-            <label>الملاحظات والتوصيات:</label>
-            <textarea name="notes_recommendations"></textarea>
+            <label>الملاحظات والتوصيات</label>
+            <textarea name="الملاحظات والتوصيات"></textarea>
             
-            <label>الأهداف المحددة:</label>
-            <textarea name="goals"></textarea>
+            <label>الأهداف المحددة</label>
+            <textarea name="الأهداف المحددة"></textarea>
             
-            <label>الإجراءات المتفق عليها:</label>
-            <textarea name="actions"></textarea>
+            <label>الإجراءات المتفق عليها</label>
+            <textarea name="الإجراءات المتفق عليها"></textarea>
             
-            <label>الموعد المتوقع للاجتماع القادم:</label>
-            <input type="date" name="next_meeting">
+            <label>الموعد المتوقع للاجتماع القادم</label>
+            <input type="date" name="الموعد المتوقع للاجتماع القادم">
+            
+            <label>المتابعة بعد:</label>
+            <select name="المتابعة بعد" required>
+                <option value="أسبوع">أسبوع</option>
+                <option value="شهر">شهر</option>
+                <option value="ثلاثة شهور">ثلاثة شهور</option>
+            </select>
             
             <button type="submit">إرسال التقرير</button>
         </form>
